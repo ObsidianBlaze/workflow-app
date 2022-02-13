@@ -41,6 +41,7 @@ class Level extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['level'],'required'],
             [['level', 'created_at', 'updated_at'], 'integer'],
         ];
     }
