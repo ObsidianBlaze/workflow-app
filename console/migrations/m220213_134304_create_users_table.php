@@ -20,7 +20,9 @@ class m220213_134304_create_users_table extends Migration
             'level_id' => $this->integer()->defaultValue(1),
             'dept_id' => $this->integer(),
             'created_at' => $this->integer(),
-            'updated_at' => $this->integer()
+            'updated_at' => $this->integer(),
+            'created_by' => $this->integer()
+
         ]);
 
         //Creating foreign key

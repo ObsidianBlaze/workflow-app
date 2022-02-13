@@ -17,7 +17,8 @@ class m220213_133836_create_level_table extends Migration
             //Setting the default value of the level to 0
             'level' => $this->integer(),
             'created_at' => $this->integer(),
-            'updated_at' => $this->integer()
+            'updated_at' => $this->integer(),
+            'created_by' => $this->integer()
         ]);
     }
 

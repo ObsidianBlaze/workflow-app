@@ -19,7 +19,9 @@ class m220213_134343_create_request_table extends Migration
             'request_clearance_level' => $this->integer()->defaultValue(1),
             'request' => $this->string(200),
             'created_at' => $this->integer(),
-            'updated_at' => $this->integer()
+            'updated_at' => $this->integer(),
+            'created_by' => $this->integer()
+
         ]);
 
         //Creating foreign key

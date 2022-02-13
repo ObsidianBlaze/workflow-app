@@ -16,7 +16,9 @@ class m220213_133306_create_department_table extends Migration
             'id' => $this->primaryKey(),
             'dept_name' => $this->string(100),
             'created_at' => $this->integer(),
-            'updated_at' => $this->integer()
+            'updated_at' => $this->integer(),
+            'created_by' => $this->integer()
+
         ]);
     }
 

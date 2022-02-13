@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%level}}".
@@ -25,7 +27,12 @@ class Level extends \yii\db\ActiveRecord
     }
     public function behaviors()
     {
-        
+        return[
+            TimestampBehavior::class,[
+                'class' => BlameableBehavior::class,
+                'updatedByAttribute' => false
+            ]
+        ];
     }
 
     /**
