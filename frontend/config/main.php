@@ -46,6 +46,8 @@ return [
             'rules' => [
                 ['class' => \yii\rest\UrlRule::class, 'controller'=>'level'],
                 ['class' => \yii\rest\UrlRule::class, 'controller'=>'department'],
+                ['class' => \yii\rest\UrlRule::class, 'controller'=>'users'],
+
 
             ],
         ],
