@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%department}}".
@@ -24,12 +26,23 @@ class Department extends \yii\db\ActiveRecord
         return '{{%department}}';
     }
 
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class, [
+                'class' => BlameableBehavior::class,
+                'updatedByAttribute' => false
+            ]
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
+            [['dept_name'], 'required'],
             [['created_at', 'updated_at'], 'integer'],
             [['dept_name'], 'string', 'max' => 100],
         ];
