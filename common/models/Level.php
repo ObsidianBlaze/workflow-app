@@ -18,6 +18,11 @@ use yii\behaviors\TimestampBehavior;
  */
 class Level extends \yii\db\ActiveRecord
 {
+    public function fields()
+    {
+        return ['id','level'];
+    }
+
     /**
      * {@inheritdoc}
      */
