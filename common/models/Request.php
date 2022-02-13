@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%request}}".
@@ -27,12 +29,23 @@ class Request extends \yii\db\ActiveRecord
         return '{{%request}}';
     }
 
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class, [
+                'class' => BlameableBehavior::class,
+                'updatedByAttribute' => false
+            ]
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
+            [['user_id','request'], 'required'],
             [['user_id', 'request_clearance_level', 'created_at', 'updated_at'], 'integer'],
             [['status'], 'string', 'max' => 20],
             [['request'], 'string', 'max' => 200],
