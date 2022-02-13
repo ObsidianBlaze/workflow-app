@@ -23,6 +23,10 @@ class Level extends \yii\db\ActiveRecord
     {
         return '{{%level}}';
     }
+    public function behaviors()
+    {
+        
+    }
 
     /**
      * {@inheritdoc}
