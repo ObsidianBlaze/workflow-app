@@ -4,7 +4,7 @@
 namespace frontend\controllers;
 
 
-use common\models\Users;
+use frontend\resource\Users;
 use yii\rest\ActiveController;
 
 class UsersController extends ActiveController

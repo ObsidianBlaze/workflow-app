@@ -4,7 +4,7 @@
 namespace frontend\controllers;
 
 
-use common\models\Request;
+use frontend\resource\Request;
 use yii\rest\ActiveController;
 
 class RequestController extends ActiveController

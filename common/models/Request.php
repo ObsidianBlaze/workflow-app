@@ -61,7 +61,7 @@ class Request extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'status' => 'Status',
-            'user_id' => 'User ID',
+            'user_id' => 'Users ID',
             'request_clearance_level' => 'Request Clearance Level',
             'request' => 'Request',
             'created_at' => 'Created At',
@@ -70,7 +70,7 @@ class Request extends \yii\db\ActiveRecord
     }
 
     /**
-     * Gets query for [[User]].
+     * Gets query for [[Users]].
      *
      * @return \yii\db\ActiveQuery|\common\models\query\UsersQuery
      */
